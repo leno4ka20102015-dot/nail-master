@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Studio | Маникюр</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff5f7; /* Нежный розовый */
+            color: #4a3b42;
+            line-height: 1.6;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
 
+        /* Шапка */
+        header {
+            background: linear-gradient(135deg, #ffd1dc, #ffb6c1);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            color: #8b4557;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1.3rem;
+            color: #a86173;
+        }
+
+        /* Услуги */
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 60px 20px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(255, 182, 193, 0.2);
+            transition: transform 0.3s;
+            border: 1px solid #ffe4e9;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+        .service-card h3 {
+            font-size: 1.4rem;
+            color: #8b4557;
+            margin-bottom: 10px;
+        }
+        .service-card .price {
+            font-size: 1.2rem;
+            color: #a86173;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 154, 158, 0.6);
+        }
+
+        /* О мастере */
+        .about {
+            background-color: #ffe4e9;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .about h2 {
+            font-size: 2.2rem;
+            color: #8b4557;
+            margin-bottom: 20px;
+        }
+        .about p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #6a4a54;
+        }
+
+        /* Контакты */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #8b4557;
+            color: white;
+        }
+        footer h2 {
+            margin-bottom: 15px;
+        }
+        footer a {
+            color: #ffd1dc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin: 5px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nail Studio</h1>
+        <p>Идеальный маникюр для ваших рук</p>
+    </header>
+
+    <section class="services">
+        <div class="service-card">
+            <img src="https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Маникюр">
+            <h3>Классический маникюр</h3>
+            <p class="price">1500 ₽</p>
+            <a href="https://t.me/ВАШ_НИК" target="_blank" class="btn">Записаться</a>
+        </div>
+        <div class="service-card">
+            <img src="https://images.pexels.com/photos/939836/pexels-photo-939836.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Дизайн">
+            <h3>Дизайн + Покрытие</h3>
+            <p class="price">2500 ₽</p>
+            <a href="https://t.me/ВАШ_НИК" target="_blank" class="btn">Записаться</a>
+        </div>
+        <div class="service-card">
+            <img src="https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Педикюр">
+            <h3>Педикюр</h3>
+            <p class="price">2000 ₽</p>
+            <a href="https://t.me/ВАШ_НИК" target="_blank" class="btn">Записаться</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>О мастере</h2>
+        <p>Меня зовут Анна. Я сертифицированный мастер маникюра с опытом более 5 лет. Работаю только с качественными материалами и стерильными инструментами. Ваши руки в надежных руках!</p>
+    </section>
+
+    <footer>
+        <h2>Связаться со мной</h2>
+        <p><a href="https://t.me/ВАШ_НИК" target="_blank">Telegram</a> | <a href="https://wa.me/79991234567" target="_blank">WhatsApp</a></p>
+        <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">© 2026 Nail Studio.</p>
+    </footer>
+
+</body>
+</html>
