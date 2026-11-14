@@ -12,15 +12,12 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fff5f7; /* Нежный розовый */
+            background-color: #fff5f7;
             color: #4a3b42;
             line-height: 1.6;
         }
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
-        /* Шапка */
         header {
             background: linear-gradient(135deg, #ffd1dc, #ffb6c1);
             text-align: center;
@@ -30,39 +27,33 @@
             font-size: 3.5rem;
             color: #8b4557;
             margin-bottom: 10px;
-            letter-spacing: 1px;
         }
-        header p {
-            font-size: 1.3rem;
-            color: #a86173;
-        }
+        header p { font-size: 1.3rem; color: #a86173; }
 
-        /* Услуги */
         .services {
             display: flex;
             justify-content: center;
             gap: 30px;
             padding: 60px 20px;
             flex-wrap: wrap;
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         .service-card {
             background: white;
             border-radius: 20px;
-            padding: 30px;
-            width: 280px;
+            padding: 25px;
+            width: 300px;
             text-align: center;
             box-shadow: 0 8px 20px rgba(255, 182, 193, 0.2);
             transition: transform 0.3s;
             border: 1px solid #ffe4e9;
         }
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
+        .service-card:hover { transform: translateY(-10px); }
+        
         .service-card img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
             border-radius: 15px;
             margin-bottom: 15px;
@@ -70,14 +61,29 @@
         .service-card h3 {
             font-size: 1.4rem;
             color: #8b4557;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
-        .service-card .price {
-            font-size: 1.2rem;
-            color: #a86173;
-            font-weight: bold;
+        
+        .price-list {
+            text-align: left;
             margin-bottom: 20px;
+            font-size: 0.95rem;
+            background: #fff0f3;
+            padding: 10px 15px;
+            border-radius: 10px;
         }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            border-bottom: 1px dashed #ffb6c1;
+            padding-bottom: 3px;
+        }
+        .price-item span:last-child {
+            font-weight: bold;
+            color: #a86173;
+        }
+
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, #ff9a9e, #fecfef);
@@ -89,39 +95,23 @@
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(255, 154, 158, 0.4);
         }
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 154, 158, 0.6);
-        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 154, 158, 0.6); }
 
-        /* О мастере */
         .about {
             background-color: #ffe4e9;
             padding: 60px 20px;
             text-align: center;
         }
-        .about h2 {
-            font-size: 2.2rem;
-            color: #8b4557;
-            margin-bottom: 20px;
-        }
-        .about p {
-            max-width: 600px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            color: #6a4a54;
-        }
+        .about h2 { font-size: 2.2rem; color: #8b4557; margin-bottom: 20px; }
+        .about p { max-width: 600px; margin: 0 auto; font-size: 1.1rem; color: #6a4a54; }
 
-        /* Контакты */
         footer {
             text-align: center;
             padding: 40px 20px;
             background-color: #8b4557;
             color: white;
         }
-        footer h2 {
-            margin-bottom: 15px;
-        }
+        footer h2 { margin-bottom: 15px; }
         footer a {
             color: #ffd1dc;
             text-decoration: none;
@@ -131,9 +121,7 @@
             margin: 5px;
             transition: color 0.3s;
         }
-        footer a:hover {
-            color: white;
-        }
+        footer a:hover { color: white; }
     </style>
 </head>
 <body>
@@ -144,22 +132,42 @@
     </header>
 
     <section class="services">
+        <!-- Карточка 1 -->
         <div class="service-card">
-            <img src="https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Маникюр">
-            <h3>Классический маникюр</h3>
-            <p class="price">1500 ₽</p>
+            <img src="1.jpg" alt="Маникюр">
+            <h3>Маникюр</h3>
+            <div class="price-list">
+                <div class="price-item"><span>Короткие ногти:</span> <span>1500 ₽</span></div>
+                <div class="price-item"><span>Средние ногти:</span> <span>1800 ₽</span></div>
+                <div class="price-item"><span>Длинные ногти:</span> <span>2100 ₽</span></div>
+                <div class="price-item"><span>Наращивание:</span> <span>3000 ₽</span></div>
+            </div>
             <a href="https://t.me/nikto3253" target="_blank" class="btn">Записаться</a>
         </div>
+
+        <!-- Карточка 2 -->
         <div class="service-card">
-            <img src="https://images.pexels.com/photos/939836/pexels-photo-939836.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Дизайн">
-            <h3>Дизайн + Покрытие</h3>
-            <p class="price">2500 ₽</p>
+            <img src="2.jpg" alt="Дизайн">
+            <h3>Дизайн</h3>
+            <div class="price-list">
+                <div class="price-item"><span>1 ноготь (простой):</span> <span>100 ₽</span></div>
+                <div class="price-item"><span>1 ноготь (сложный):</span> <span>200 ₽</span></div>
+                <div class="price-item"><span>Френч / Лунный:</span> <span>500 ₽</span></div>
+                <div class="price-item"><span>Все 10 ногтей:</span> <span>1000 ₽</span></div>
+            </div>
             <a href="https://t.me/nikto3253" target="_blank" class="btn">Записаться</a>
         </div>
+
+        <!-- Карточка 3 -->
         <div class="service-card">
-            <img src="https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Педикюр">
+            <img src="3.jpg" alt="Педикюр">
             <h3>Педикюр</h3>
-            <p class="price">2000 ₽</p>
+            <div class="price-list">
+                <div class="price-item"><span>Без покрытия:</span> <span>2000 ₽</span></div>
+                <div class="price-item"><span>С покрытием:</span> <span>2500 ₽</span></div>
+                <div class="price-item"><span>Мужской:</span> <span>2800 ₽</span></div>
+                <div class="price-item"><span>Smart-педикюр:</span> <span>3500 ₽</span></div>
+            </div>
             <a href="https://t.me/nikto3253" target="_blank" class="btn">Записаться</a>
         </div>
     </section>
